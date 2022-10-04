@@ -1,4 +1,4 @@
-<p align='center'>Todo Web App</p>
+<h1 align='center'>Todo Web App</h1>
 
 ![Screenshot](./public/app.png)
 
