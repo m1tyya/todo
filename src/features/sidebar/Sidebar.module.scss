@@ -1,0 +1,20 @@
+@use '@/styles/abstracts' as *;
+
+.sidebar {
+	background-color: get-color($colors-map, 'bg', 'base');
+
+	&__title {
+		margin: 1rem 0;
+
+		color: white;
+		font-family: 'Inter';
+		font-size: 2rem;
+		font-weight: 500;
+	}
+
+	&__colorFilters {
+		display: flex;
+
+		align-items: center;
+	}
+}

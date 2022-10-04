@@ -1,0 +1,89 @@
+@use 'sass:math';
+@use '@/styles/abstracts' as *;
+
+$loader-size: 2rem;
+$check-height: math.div($loader-size, 1.8);
+$check-width: math.div($check-height, 2);
+$check-left: math.div($loader-size, 5);
+$check-thickness: 3px;
+$brand-success: get-color($colors-map, 'primary', 'base');
+
+.circleLoader {
+	position: relative;
+
+	display: inline-block;
+	width: $loader-size;
+	height: $loader-size;
+	margin: 0 1.5rem;
+
+	background-color: inherit;
+	border: 2px solid hsl(245 10% 50%);
+	border-radius: 30%;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.loadComplete {
+	-webkit-animation: none;
+	animation-timing-function: ease;
+	border-color: $brand-success;
+}
+
+.checkmark {
+	display: block;
+
+	&Draw:after {
+		animation-duration: 700ms;
+		animation-name: checkmark;
+		animation-timing-function: ease;
+		transform: scaleX(-1) rotate(150deg);
+	}
+
+	&:after {
+		content: '';
+
+		position: absolute;
+		top: $check-height;
+		left: $check-left;
+
+		width: $check-width;
+		height: $check-height;
+
+		border-right: $check-thickness solid $brand-success;
+		border-top: $check-thickness solid $brand-success;
+		opacity: 1;
+		transform-origin: left top;
+	}
+}
+
+@keyframes checkmark {
+	0% {
+		width: 0;
+		height: 0;
+
+		opacity: 1;
+	}
+
+	20% {
+		width: $check-width;
+		height: 0;
+
+		opacity: 1;
+	}
+
+	40% {
+		width: $check-width;
+		height: $check-height;
+
+		opacity: 1;
+	}
+
+	100% {
+		width: $check-width;
+		height: $check-height;
+
+		opacity: 1;
+	}
+}

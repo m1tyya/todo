@@ -1,0 +1,23 @@
+@use 'colors' as *;
+@use 'functions' as *;
+
+@mixin highlited {
+	.highlited {
+		box-shadow: 0 1px 9px 4px get-color($colors-map, 'primary', 'light-5');
+	}
+}
+
+@mixin button {
+	display: inline-block;
+	padding: .7rem 1.2rem;
+	margin-right: 1rem;
+
+	color: white;
+	font-family: 'Manrope';
+	font-weight: 600;
+
+	background-color: get-color($colors-map, 'primary', 'dark-15');
+	border: none;
+	border-radius: 1.5rem;
+	cursor: pointer;
+}

@@ -1,0 +1,8 @@
+@use 'functions' as *;
+
+$colors: (
+	'primary': hsl(253 80% 67%),
+	'bg': hsl(240 15% 10%),
+);
+
+$colors-map: create-colors-map($colors, 3, 5);

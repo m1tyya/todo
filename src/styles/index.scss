@@ -1,0 +1,9 @@
+@forward 'abstracts';
+@forward 'base';
+@use 'abstracts' as *;
+
+body {
+	min-height: 100vh;
+
+	background-color: get-color($colors-map, 'bg', 'base');
+}

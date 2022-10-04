@@ -1,0 +1,154 @@
+{
+	"plugins": ["stylelint-color-format", "stylelint-order", "stylelint-scss"],
+	"rules": {
+		"alpha-value-notation": "number",
+		"block-closing-brace-empty-line-before": "never",
+		"block-opening-brace-space-after": "always-single-line",
+		"block-opening-brace-space-before": "always",
+		"color-function-notation": "modern",
+		"color-format/format": {
+			"format": "hsl"
+		},
+		"declaration-block-trailing-semicolon": "always",
+		"indentation": "tab",
+		"length-zero-no-unit": true,
+		"order/order": [
+			[
+				"custom-properties",
+				"declarations",
+				{
+					"type": "at-rule",
+					"name": "supports"
+				},
+				{
+					"type": "at-rule",
+					"name": "media"
+				},
+				"rules"
+			],
+			{
+				"severity": "warning"
+			}
+		],
+		"order/properties-order": [
+			[
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"content"
+				]
+			},
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"position",
+					"top",
+					"right",
+					"bottom",
+					"left",
+					"z-index"
+				]
+			},
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"display",
+					"box-sizing",
+					"float",
+					"width",
+					"height",
+					"max-width",
+					"max-height",
+					"min-width",
+					"min-height",
+					"padding",
+					"padding-top",
+					"padding-right",
+					"padding-bottom",
+					"padding-left",
+					"margin",
+					"margin-top",
+					"margin-right",
+					"margin-bottom",
+					"margin-left",
+					"margin-collapse",
+					"margin-top-collapse",
+					"margin-right-collapse",
+					"margin-bottom-collapse",
+					"margin-left-collapse",
+					"overflow",
+					"overflow-x",
+					"overflow-y",
+					"clip",
+					"clear"
+				]
+			},
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"text-transform",
+					"color",
+					"font-family",
+					"font-size",
+					"font-weight",
+					"line-height",
+					"font-style",
+					"font-variant",
+					"font-stretch"
+				]
+			},
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"flex-flow",
+					"flex-direction",
+					"flex-wrap",
+					"justify-content",
+					"align-items",
+					"align-content"
+				]
+			},
+			{
+				"emptyLineBefore": "always",
+				"noEmptyLineBetween": true,
+				"properties": [
+					"order",
+					"flex",
+					"flex-grow",
+					"flex-shrink",
+					"flex-basis",
+					"align-self"
+				]
+			}
+		],
+		{
+			"unspecified": "bottomAlphabetical",
+			"emptyLineBeforeUnspecified": "always",
+			"severity": "warning"
+		}
+		],
+		"property-no-unknown": true,
+		"scss/at-rule-no-unknown": true,
+		"scss/map-keys-quotes": "always",
+		"selector-attribute-brackets-space-inside": "never",
+		"selector-attribute-operator-space-after": "never",
+		"selector-attribute-operator-space-before": "never",
+		"selector-combinator-space-after": "always",
+		"selector-combinator-space-before": "always",
+		"selector-descendant-combinator-no-non-space": true,
+		"selector-list-comma-space-after": "always-single-line",
+		"selector-list-comma-space-before": "never",
+		"selector-max-empty-lines": 0,
+		"selector-pseudo-class-case": "lower",
+		"selector-pseudo-class-parentheses-space-inside": "never",
+		"selector-pseudo-element-case": "lower",
+		"shorthand-property-no-redundant-values": true,
+		"string-quotes": "single",
+		"unit-no-unknown": true
+	}
+}

@@ -1,0 +1,13 @@
+@use '../../styles/abstracts' as *;
+
+.container {
+	display: grid;
+	max-width: 100rem;
+	margin: 7rem auto;
+
+	border: 3px solid get-color($colors-map, 'primary', 'light-5');
+	border-radius: 2rem;
+	gap: 3px;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 1fr;
+}

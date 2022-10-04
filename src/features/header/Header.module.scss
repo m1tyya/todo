@@ -1,0 +1,36 @@
+@use '../../styles/abstracts' as *;
+
+.header {
+	&__form {
+		display: flex;
+		min-height: 5.5rem;
+		margin-bottom: 2rem;
+
+		align-items: center;
+
+		background-color: get-color($colors-map, 'bg', 'light-10');
+		border-radius: 4rem;
+	}
+
+	&__input {
+		width: 100%;
+
+		color: white;
+		font-family: 'Inter';
+		font-size: 2rem;
+
+		background-color: inherit;
+		border-radius: inherit;
+	}
+	
+	&__icon {
+		width: 2.5rem;
+		height: 100%;
+		margin: 0 1.5rem;
+
+		color: get-color($colors-map, 'primary', 'base');
+	}
+}
+
+
+

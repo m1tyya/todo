@@ -1,0 +1,26 @@
+@function create-colors-map($colors, $shades, $step) {
+	$colors-map: ();
+
+	@each $key, $value in $colors {
+		$map: ();
+		$map: map-merge($map, ($key: create-color-map($value, $shades, $step)));
+		$colors-map: map-merge($colors-map, $map);
+	}
+	@return $colors-map;
+}
+
+@function create-color-map($color, $shades, $step) {
+	$map: ();
+	@for $var from $shades through 1 {
+		$map: map-merge($map, ('light-#{$var * $step}': lighten($color, $var * $step)));
+	}
+	$map: map-merge($map, ('base': $color));
+	@for $var from 1 through $shades {
+		$map: map-merge($map, ('dark-#{$var * $step}': darken($color, $var * $step)));
+	}
+	@return $map;
+}
+
+@function get-color($colors-map, $color, $shade) {
+	@return map-get(map-get($colors-map, $color), $shade);
+}

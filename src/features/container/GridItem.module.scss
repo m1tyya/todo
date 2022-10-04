@@ -1,0 +1,9 @@
+@use '../../styles/abstracts' as *;
+
+.gridItem {
+	padding: 3rem;
+
+	&:nth-of-type(1) {
+		border-right: 3px solid get-color($colors-map, 'primary', 'light-5');
+	}
+}
