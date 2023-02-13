@@ -2,13 +2,13 @@ import { useAppDispatch } from '@/store';
 
 import styles from './ButtonAction.module.scss';
 
+
 interface ButtonActionProps {
 	text: string,
 	action: () => void,
 }
 
 function ButtonAction({ action, text }: ButtonActionProps) {
-	console.log(typeof action);
 	const dispatch = useAppDispatch();
 
 	function handleAction(action) {

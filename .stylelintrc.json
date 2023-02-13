@@ -1,4 +1,5 @@
 {
+	"ignoreFiles": ["**/*.tsx"],
 	"plugins": ["stylelint-color-format", "stylelint-order", "stylelint-scss"],
 	"rules": {
 		"alpha-value-notation": "number",

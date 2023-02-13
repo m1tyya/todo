@@ -9,7 +9,6 @@ function ButtonColorReset() {
 	const dispatch = useAppDispatch();
 	function handleColorReset() {
 		dispatch(colorFilterReset());
-		console.log(store.getState().filters.colors);
 	}
 
 	return (

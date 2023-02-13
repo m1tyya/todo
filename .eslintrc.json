@@ -122,7 +122,7 @@
 			{
 				"lib": "never",
 				"path": "never",
-				"types": "never"
+				"types": "prefer-import"
 			}
 		],
 		"@typescript-eslint/type-annotation-spacing": "warn",
@@ -174,7 +174,6 @@
 				"tabWidth": 4
 			}
 		],
-		"new-cap": "warn",
 		"no-case-declarations": "warn",
 		"no-confusing-arrow": "warn",
 		"no-dupe-class-members": "warn",

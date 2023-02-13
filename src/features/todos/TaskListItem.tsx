@@ -1,8 +1,10 @@
+import { clsx } from 'clsx';
 import { capitalize } from 'lodash';
 import { useState } from 'react';
 import { MdColorize, MdOutlineCancel } from 'react-icons/md';
 import { useAppDispatch, useAppSelector } from 'src/store';
 
+import { inter } from '../header/Header';
 import { Color } from '../sidebar/filtersSlice';
 
 import Checkmark from './Checkmark';
@@ -32,7 +34,7 @@ function TaskListItem({ id }) {
 	));
 
 	return (
-		<div className={styles.todo__listItem}>
+		<div className={clsx(styles.todo__listItem, inter.className)}>
 			<Checkmark id={todo.id} />
 			<p className={styles.todo__listText}>{todo.text}</p>
 			<select

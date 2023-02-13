@@ -1,4 +1,5 @@
 import '@/styles/index.scss';
+
 import Head from 'next/head';
 import { Provider } from 'react-redux';
 
